@@ -39,6 +39,6 @@ app.post("/upload", upload.single("image"), (req, res) => {
 });
 
 // Start Server
-app.listen(9000, () => {
+app.listen(8080, () => {
     console.log('Server is running on http://localhost:9000');
 });
