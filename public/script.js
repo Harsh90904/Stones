@@ -23,11 +23,10 @@ document.getElementById("itemForm").addEventListener("submit", async (e) => {
     }
 });
 
-const API_URL = "http://localhost:9000/stone";
 
 async function loadItems() {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch("http://localhost:9000/stone");
         const items = await response.json();
         const container = document.getElementById("itemsContainer");
 
