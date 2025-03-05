@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const multer = require('multer');
 const path = require('path');
-const stonerouter = require('./router/stone.r');
+const multer = require('multer');
 const connectDB = require('./config/DB');
+const stonerouter = require('./router/stone.r');
 
 const app = express();
 
@@ -12,7 +12,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Multer Setup (for File Uploads)
+// Serve static files (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Multer Setup for File Uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
