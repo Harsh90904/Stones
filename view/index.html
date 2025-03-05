@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Item Manager</h1>
+        
+        <form id="itemForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="img" placeholder="Image URL" required>
+            <textarea id="des" placeholder="Description" required></textarea>
+            <button type="submit">Add Item</button>
+        </form>
+        
+        <div id="itemsContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
